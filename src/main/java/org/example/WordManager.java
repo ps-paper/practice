@@ -26,6 +26,11 @@ public class WordManager {
             int menu = selectMenu();
             if(menu==0) break;
             if(menu == 4) {
+
+            }
+            else if(menu ==1) {
+
+            }
         }
     }
 }
