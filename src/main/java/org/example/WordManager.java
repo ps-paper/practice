@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class WordManager {
     Scanner s = new Scanner(System.in);
+    WordCRUD wordCRUD;
+
+    WordManager(){
+        wordCRUD = new WordCRUD(s);
+    }
     public int selectMenu() {
         System.out.println("*** 영단어 마스터 ***\n"
                 + "**********************\n"
@@ -26,10 +31,10 @@ public class WordManager {
             int menu = selectMenu();
             if(menu==0) break;
             if(menu == 4) {
-
+                wordCRUD.addWord();
             }
-            else if(menu ==1) {
-
+            else if(menu == 1) {
+                wordCRUD.listALL();
             }
         }
     }

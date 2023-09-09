@@ -12,9 +12,9 @@ public class WordCRUD implements ICRUD{
     }
     @Override
     public Object add() {
-        System.out.print("=>난이도(1,2,3) & 새 다너 입력 : ");
+        System.out.print("=>난이도(1,2,3) & 새 단어 입력 :");
         int level = s.nextInt();
-        String word = s.next();
+        String word = s.nextLine();
 
         System.out.print("뜻 입력 : ");
         String meaning = s.nextLine();
@@ -42,4 +42,12 @@ public class WordCRUD implements ICRUD{
     public void selectOne(int id) {
 
     }
+    public void listALL(){
+        System.out.println("----------------------------------");
+        for(int i=0; i < list.size(); i++) {
+            System.out.print((i+1) + " ");
+            System.out.println(list.get(i).toString());
+}
+System.out.println("----------------------------------");
+}
 }
