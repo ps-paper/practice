@@ -29,12 +29,21 @@ public class WordManager {
     public void start() {
         while (true) {
             int menu = selectMenu();
-            if(menu==0) break;
+            if(menu==0) {
+                System.out.println("사용종료");
+                break;
+            }
             if(menu == 4) {
                 wordCRUD.addWord();
             }
             else if(menu == 1) {
-                wordCRUD.listALL();
+                wordCRUD.listAll();
+            }
+            else if(menu == 5) { // 업데이트
+               wordCRUD.updateItem();
+            }
+            else if(menu == 6) { // 수정
+
             }
         }
     }
