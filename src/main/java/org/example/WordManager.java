@@ -22,7 +22,6 @@ public class WordManager {
                 + "0. 나가기\n"
                 + "**********************\n"
                 + "=> 원하는 메뉴는? ");
-
         return s.nextInt();
     }
 
@@ -43,7 +42,7 @@ public class WordManager {
                wordCRUD.updateItem();
             }
             else if(menu == 6) { // 수정
-
+                wordCRUD.deleteItem();
             }
         }
     }
